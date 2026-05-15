@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Cinzel', serif;
+    color: #e6e6e6;
+    background:
+        radial-gradient(circle at top, rgba(120, 0, 0, 0.7), transparent 60%),
+        radial-gradient(circle at bottom, rgba(212, 175, 55, 0.15), transparent 60%),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../imgs/kratos_remaster.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #050000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(107, 2, 2, 0.5);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100%;
+    max-width: 250px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #f1c40f, #d4af37);
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.7);
+    transition: width 0.35s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px 25px;
+    background-color: #7a0c0c;
+    color: #f1c40f;
+    border: 1px solid #f1c40f;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #f1c40f;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+}
+
+.contacto,
+.gracias {
+    max-width: 550px;
+    margin: 100px auto;
+    margin-bottom: 0;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.contacto {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 0.8s ease forwards;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ipt {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    resize: none;
+    font-family: 'Cinzel', serif;
+}
+
+textarea {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    resize: none;
+    height: 100px;
+    font-family: 'Cinzel', serif;
+}
+
+.ipt:focus,
+textarea:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 8px #f1c40f;
+}
+
+.gracias {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: aparecerZoom 0.6s ease forwards;
+    margin-bottom: 10px;
+}
+
+.gracias h1 {
+    color: #f1c40f;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.gracias p {
+    margin-bottom: 20px;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerZoom {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes linea {
+    to {
+        width: 100%;
+    }
+}
+
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburguesa span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hamburguesa {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background: rgba(10, 0, 0, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .left,
+    .right {
+        transform: translateY(20px);
+        text-align: center;
+    }
+
+    #inicio {
+        font-size: 26px;
+    }
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #7a0c0c;
+    color: #f1c40f;
+    border: 1px solid #f1c40f;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+#topBtn.show {
+    opacity: 1;
+}

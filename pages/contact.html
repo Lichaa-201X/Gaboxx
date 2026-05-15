@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | God Of War</title>
+
+    <link rel="stylesheet" href="../styles/contact_style.css">
+    <link rel="icon" href="../imgs/log_gow.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../imgs/logo_pagina.png" alt="Logo God of War">
+
+            <ul class="nav-links">
+                <li><a href="https://www.playstation.com/es-ar/god-of-war/" target="_blank">Comprar God Of War</a></li>
+                <li><a href="../pages/index.html">Inicio</a></li>
+                <li><a href="../pages/personajes.html">Personajes</a></li>
+                <li><a href="../pages/remake.html">Remake</a></li>
+            </ul>
+
+            <div class="hamburguesa" id="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <h2>Contacto</h2>
+
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" class="ipt" placeholder="Tu nombre">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="ipt" placeholder="Tu email">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje"></textarea>
+
+            <button onclick="mensaje()" class="btn" id="btn">Enviar</button>
+        </section>
+    </main>
+
+</body>
+<script src="../script/contact.js"></script>
+
+</html>
