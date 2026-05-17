@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
 
     /* ==========================================
        1. MENÚ HAMBURGUESA
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-});
 
 /* ==========================================
    5. FUNCIÓN GLOBAL (Se deja afuera del DOMContentLoaded)
