@@ -27,24 +27,17 @@ html {
 
 .navbar {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px;
-
     background: rgba(107, 2, 2, 0.5);
-
     backdrop-filter: blur(8px);
-
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
     position: fixed;
     top: 0;
     left: 0;
-
     z-index: 1000;
 }
 
@@ -115,148 +108,80 @@ html {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-.princ{
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:100px 25px 100px;
-
-    position:relative;
+.princ {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 25px 100px;
+    position: relative;
 }
 
-.princ::before{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-        radial-gradient(circle at center,
-        rgba(212,175,55,.08),
-        transparent 70%);
-
-    pointer-events:none;
+.princ::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(212,175,55,.08), transparent 70%);
+    pointer-events: none;
 }
 
-.princ h1{
+.princ h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-
-    text-transform:uppercase;
-
-    letter-spacing:8px;
-
-    line-height:1.1;
-
-    margin-bottom:35px;
-
-    background:linear-gradient(
-        to bottom,
-        #fff4c4,
-        #f1c40f,
-        #b8860b
-    );
-
-    background-clip:text;
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:
-        0 0 25px rgba(212,175,55,.35),
-        0 0 60px rgba(212,175,55,.15);
-
-    position:relative;
-
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    background: linear-gradient(to bottom, #fff4c4, #f1c40f, #b8860b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 25px rgba(212,175,55,.35), 0 0 60px rgba(212,175,55,.15);
+    position: relative;
     animation: brillo 3s ease-in-out infinite alternate;
 }
 
-.princ h1::after{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    bottom:-18px;
-
-    transform:translateX(-50%);
-
-    width:220px;
-    height:4px;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        #d4af37,
-        transparent
-    );
-
-    box-shadow:0 0 15px rgba(212,175,55,.5);
+.princ h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 4px;
+    border-radius: 50px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    box-shadow: 0 0 15px rgba(212,175,55,.5);
 }
 
-.princ p{
-    max-width:900px;
-
-    font-size:clamp(1rem, 2vw, 1.35rem);
-
-    line-height:2;
-
-    letter-spacing:1px;
-
-    color:#f0f0f0;
-
-    text-shadow:
-        0 0 10px rgba(0,0,0,.9),
-        0 0 20px rgba(0,0,0,.5);
-
+.princ p {
+    max-width: 900px;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    text-shadow: 0 0 10px rgba(0,0,0,.9), 0 0 20px rgba(0,0,0,.5);
     animation: aparecer 1.2s ease;
 }
 
-@keyframes brillo{
-    from{
-        filter:drop-shadow(0 0 5px rgba(212,175,55,.2));
+@keyframes brillo {
+    from {
+        filter: drop-shadow(0 0 5px rgba(212,175,55,.2));
     }
-
-    to{
-        filter:drop-shadow(0 0 18px rgba(212,175,55,.6));
-    }
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
+    to {
+        filter: drop-shadow(0 0 18px rgba(212,175,55,.6));
     }
 }
 
-@media (max-width:768px){
-
-    .princ{
-        padding:140px 20px 80px;
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
     }
-
-    .princ h1{
-        letter-spacing:4px;
-    }
-
-    .princ h1::after{
-        width:140px;
-    }
-
-    .princ p{
-        line-height:1.8;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -375,7 +300,6 @@ html {
     font-family: 'Cinzel', serif;
     text-decoration: none;
     text-align: center;
-    font-size: x-large;
 }
 
 .btn-menu:hover {
@@ -405,7 +329,7 @@ html {
 }
 
 .texto {
-    font-size: x-large;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
 }
@@ -442,9 +366,7 @@ html {
     margin-bottom: 25px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow:
-        0 0 10px rgba(212,175,55,0.5),
-        0 0 25px rgba(212,175,55,0.2);
+    text-shadow: 0 0 10px rgba(212,175,55,0.5), 0 0 25px rgba(212,175,55,0.2);
 }
 
 .intro-guia {
@@ -458,7 +380,8 @@ html {
 
 .guia-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Ajuste para evitar desbordamiento en pantallas chicas */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 35px;
 }
 
@@ -471,17 +394,13 @@ html {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(5px);
-    box-shadow:
-        0 0 15px rgba(0,0,0,0.5),
-        inset 0 0 10px rgba(212,175,55,0.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5), inset 0 0 10px rgba(212,175,55,0.05);
 }
 
 .guia-card:hover {
     transform: translateY(-10px);
     border-color: rgba(212,175,55,0.7);
-    box-shadow:
-        0 0 25px rgba(212,175,55,0.2),
-        0 0 60px rgba(0,0,0,0.6);
+    box-shadow: 0 0 25px rgba(212,175,55,0.2), 0 0 60px rgba(0,0,0,0.6);
 }
 
 .guia-card::before {
@@ -539,8 +458,9 @@ hr {
     margin: 0;
 }
 
-@media (max-width: 900px) {
+/* --- MEDIA QUERIES --- */
 
+@media (max-width: 900px) {
     .logo {
         width: 210px;
     }
@@ -576,14 +496,30 @@ hr {
 }
 
 @media (max-width: 768px) {
+    body {
+        /* Fix esencial para que el fondo no haga un zoom roto en móviles (ej. iOS) */
+        background-attachment: scroll; 
+    }
+
+    .princ {
+        padding: 140px 20px 80px;
+    }
+
+    .princ h1 {
+        letter-spacing: 4px;
+    }
+
+    .princ h1::after {
+        width: 140px;
+    }
+
+    .princ p {
+        line-height: 1.8;
+    }
 
     .hamburguesa {
         display: flex;
         z-index: 1100;
-    }
-
-    .navbar .btn {
-        display: none;
     }
 
     .nav-links {
@@ -609,7 +545,6 @@ hr {
 }
 
 @media (max-width: 600px) {
-
     .titulo-seccion,
     #god-of-war-lore h2 {
         font-size: 2rem;
@@ -631,7 +566,7 @@ hr {
 
     .left,
     .right {
-        transform: translateY(30px);
+        transform: translateY(30px); /* Ajustado para que el fade-in venga desde abajo en mobile */
         text-align: center;
     }
 
