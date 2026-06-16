@@ -25,6 +25,49 @@ html {
     scroll-behavior: smooth;
 }
 
+footer{
+    background-color: rgba(107, 2, 2, 0.5);
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+footer a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #f1c40f;
+}
+
+footer a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #f1c40f, #d4af37);
+    transform: translateX(-50%);
+    transition: 0.35s ease;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
+}
+
+footer a:hover::after {
+    width: 100%;
+}   
+
+#hr-final {
+    border: none;
+    height: 1px;
+    background-color: rgb(138, 138, 138);
+}
+
 .navbar {
     width: 100%;
     display: flex;
@@ -348,9 +391,7 @@ html {
 #guia-god-of-war {
     width: 100%;
     padding: 100px 6%;
-    background:
-        linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95)),
-        url("img/greek_bg.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95));
     color: #e6e6e6;
 }
 
@@ -451,7 +492,7 @@ html {
     color: #bdbdbd;
 }
 
-hr {
+#hr-guia {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #d4af37, transparent);
