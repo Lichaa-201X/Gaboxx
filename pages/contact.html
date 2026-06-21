@@ -10,6 +10,9 @@
     <link rel="icon" href="../imgs/log_gow.png" type="image/png">
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -29,29 +32,55 @@
                 <span></span>
                 <span></span>
                 <span></span>
-
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="contacto">
-            <h2>Contacto</h2>
 
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" class="ipt" placeholder="Tu nombre">
+        <div class="contacto-container">
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" class="ipt" placeholder="Tu email">
+            <div class="social-card">
+                <h3>Redes Sociales</h3>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje"></textarea>
+                <a href="https://github.com/lichaa-201x" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-            <button onclick="mensaje()" class="btn" id="send">Enviar</button>
-        </section>
+                <a href="https://wa.me/+5491127146948" target="_blank" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <section class="contacto">
+                <h2>Contacto</h2>
+
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" class="ipt" placeholder="Tu nombre">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" class="ipt" placeholder="Tu email">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje"></textarea>
+
+                <button class="btn" id="send">Enviar</button>
+            </section>
+
+            <div class="social-card">
+                <h3>LinkedIn</h3>
+
+                <a href="https://linkedin.com/in/TU_PERFIL" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+
     </main>
 
+    <script src="../script/contact.js"></script>
+
 </body>
-<script src="../script/contact.js"></script>
 
 </html>

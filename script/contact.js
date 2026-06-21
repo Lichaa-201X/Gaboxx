@@ -1,4 +1,4 @@
-const btn = document.getElementById("btn");
+const btn = document.getElementById("send");
 const btn_hamb = document.querySelector(".hamburguesa");
 const menu = document.querySelector(".nav-links");
 
